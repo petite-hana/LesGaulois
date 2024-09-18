@@ -29,4 +29,13 @@ public class Romain {
 			parler("J'abandonne...");
 		}
 	}
+
+	// FONCTION MAIN
+	public static void main(String[] args) {
+		Romain romain = new Romain("Rominus", 3);
+		romain.prendreParole();
+		romain.parler("Je suis un romain");
+		romain.recevoirCoup(1);
+		romain.recevoirCoup(3);
+	}
 }

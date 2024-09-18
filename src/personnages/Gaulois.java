@@ -31,4 +31,14 @@ public class Gaulois {
 	public String toString() {
 		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
 	}
+
+	// FONCTION MAIN
+	public static void main(String[] args) {
+		Gaulois gaulois = new Gaulois("Gaulux", 3);
+		Romain romain = new Romain("Rominus", 3);
+
+		gaulois.prendreParole();
+		gaulois.parler("Je suis un gaulois");
+		gaulois.frapper(romain);
+	}
 }
