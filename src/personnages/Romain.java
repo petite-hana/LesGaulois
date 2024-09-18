@@ -13,6 +13,10 @@ public class Romain {
 		return nom;
 	}
 
+	public int getForce() {
+		return force;
+	}
+
 	public void parler(String texte) {
 		System.out.println(prendreParole() + "« " + texte + "»");
 	}
@@ -33,7 +37,7 @@ public class Romain {
 	// FONCTION MAIN
 	public static void main(String[] args) {
 		Romain romain = new Romain("Rominus", 3);
-		romain.prendreParole();
+
 		romain.parler("Je suis un romain");
 		romain.recevoirCoup(1);
 		romain.recevoirCoup(3);
