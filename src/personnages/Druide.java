@@ -22,7 +22,7 @@ public class Druide {
 	}
 
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "« " + texte + "»");
+		System.out.println(prendreParole() + "« " + texte + " »");
 	}
 
 	private String prendreParole() {
@@ -34,9 +34,9 @@ public class Druide {
 		int forcePotion = random.nextInt(effetPotionMax - effetPotionMin) + effetPotionMin;
 
 		if (forcePotion > 7) {
-			parler("J'ai préparé une super potion de force");
+			parler("J'ai préparé une super potion de force " + forcePotion);
 		} else {
-			parler("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force");
+			parler("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force " + forcePotion);
 		}
 
 		return forcePotion;
