@@ -20,11 +20,11 @@ public class Chef {
 	}
 
 	private String prendreParole() {
-		return "Le chef " + nom + " du village " + village.getNom() + " : ";
+		return String.format("Le chef %s du village %s : ", nom, village.getNom());
 	}
 
 	public void frapper(Romain romain) {
-		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
+		System.out.printf("%s envoie un grand coup dans la mâchoire de %s%n", nom, romain.getNom());
 		romain.recevoirCoup(force / 3);
 	}
 }

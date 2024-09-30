@@ -12,9 +12,7 @@ public class Druide {
 		this.nom = nom;
 		this.effetPotionMin = effetPotionMin;
 		this.effetPotionMax = effetPotionMax;
-		parler("Bonjour, je suis le druide " + nom
-				+ " et ma potion peut aller d'une force " + effetPotionMin + " à "
-				+ effetPotionMax + ".");
+		parler(String.format("Bonjour, je suis le druide %s et ma potion peut aller d'une force %d à %d.", nom, effetPotionMin, effetPotionMax));
 	}
 
 	public String getNom() {
@@ -22,11 +20,11 @@ public class Druide {
 	}
 
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "« " + texte + " »");
+		System.out.printf("%s« %s »%n", prendreParole(), texte);
 	}
 
 	private String prendreParole() {
-		return "Le druide " + nom + " : ";
+		return String.format("Le druide %s : ", nom);
 	}
 
 	public int preparerPotion() {
@@ -34,15 +32,15 @@ public class Druide {
 		int forcePotion = random.nextInt(effetPotionMax - effetPotionMin) + effetPotionMin;
 
 		if (forcePotion > 7) {
-			parler("J'ai préparé une super potion de force " + forcePotion);
+			parler(String.format("J'ai préparé une super potion de force %d", forcePotion));
 		} else {
-			parler("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force " + forcePotion);
+			parler(String.format("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force %d", forcePotion));
 		}
 
 		return forcePotion;
 	}
 
-	public void boste(Gaulois gaulois) {
+	public void booster(Gaulois gaulois) {
 		if (forcePotion == 1) {
 			forcePotion = preparerPotion();
 		}

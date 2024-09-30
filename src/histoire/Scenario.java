@@ -12,9 +12,9 @@ public class Scenario {
 		Romain minus = new Romain("Minus", 6);
 
 		druide.parler("Je vais aller préparer une petite potion...");
-		druide.boste(obelix);
+		druide.booster(obelix);
 		obelix.parler("Par Bélénos, ce n'est pas juste !");
-		druide.boste(asterix);
+		druide.booster(asterix);
 
 		asterix.parler("Bonjour");
 		minus.parler("UN GAU... UN GAUGAU...");
